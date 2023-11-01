@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--navbarHeight: 4.5rem;
+	--navbar3XLHeight: 7.5rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+main,
+aside,
+section {
+	min-height: calc(100vh - var(--navbarHeight));
+}
+
+main {
+	margin-top: var(--navbarHeight);
+}
+
+/* Додали стилі для активного посилання */
+.active-link {
+	opacity: 1;
+}
+.active-link .check-mark {
+	display: grid;
+}
+
+@media only screen and (min-width: 2250px) {
+	main {
+		/* margin-top: var(--navbar3XLHeight); */
+		min-height: calc(100vh - var(--navbar3XLHeight));
+	}
+}
